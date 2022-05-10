@@ -1,7 +1,6 @@
 package main
 
 import (
-	"beego-starter/controllers"
 	_ "beego-starter/models"
 	_ "beego-starter/routers"
 	"fmt"
@@ -28,16 +27,6 @@ func init() {
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	ns :=
-		web.NewNamespace("/v1",
-			web.NSNamespace("/main",
-				web.NSInclude(
-					&controllers.MainController{},
-				),
-			),
-		)
-	web.AddNamespace(ns)
 }
 
 func main() {

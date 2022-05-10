@@ -1,3 +1,7 @@
+// @APIVersion 1.0.0
+// @Title Beego starter
+// @Description API docs
+// @Schemes http,https
 package routers
 
 import (
@@ -7,5 +11,13 @@ import (
 )
 
 func init() {
-	web.Router("/", &controllers.MainController{})
+	ns :=
+		web.NewNamespace("/v1",
+			web.NSNamespace("/user",
+				web.NSInclude(
+					&controllers.UserController{},
+				),
+			),
+		)
+	web.AddNamespace(ns)
 }
