@@ -21,7 +21,7 @@ func (c *UserController) URLMapping() {
 // @Accept json
 // @router / [get]
 func (c *UserController) GetList() {
-	user := []models.User{
+	users := []models.User{
 		{
 			Id:      1,
 			Name:    "Phan Anh",
@@ -35,7 +35,7 @@ func (c *UserController) GetList() {
 			Updated: time.Now(),
 		},
 	}
-	c.Data["json"] = user
+	c.Data["json"] = users
 	c.ServeJSON()
 }
 
