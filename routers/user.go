@@ -7,6 +7,6 @@ import (
 )
 
 func init() {
-	web.Router("v1/user", &controllers.ProfileController{}, "get:GetList")
-	web.Router("v1/user/:id", &controllers.ProfileController{}, "get:GetById")
+	web.Router("v1/user", &controllers.UserController{}, "get:GetList")
+	web.Router("v1/user/:id", &controllers.UserController{}, "get:GetById")
 }
