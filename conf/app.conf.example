@@ -8,4 +8,4 @@ db_user = root
 db_pwd = 1
 db_name = test
 db_charset = utf8mb4
-db_collation=utf8mb4_unicode_ci
+db_collation = utf8mb4_unicode_ci
